@@ -39,9 +39,10 @@ user namespaces.
 %dir %{_datadir}/zsh
 %dir %{_datadir}/zsh/site-functions
 %{_datadir}/zsh/site-functions/_bwrap
+
 # set uid-bit
 %attr(4755, root, root) %{_bindir}/bwrap
-%endif
+
 %{_mandir}/man1/bwrap.1*
 
 %changelog
