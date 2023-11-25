@@ -22,11 +22,11 @@ git clone https://github.com/34N0/bubblewrap-suid-rpm && cd bubblewrap-suid-rpm
 ```
 Download bubblewrap source
 ```bash
-spectool -g -R bubblewrap.spec
+spectool -g -R bubblewrap-suid.spec
 ```
 Build the RPM from spec:
 ```bash
-rpmbuild -ba bubblewrap.spec
+rpmbuild -ba bubblewrap-suid.spec
 ```
 
 ### Test locally
