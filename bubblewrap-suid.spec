@@ -46,6 +46,12 @@ user namespaces.
 %endif
 %{_mandir}/man1/bwrap.1*
 
+# better safe than sorry 
+chown root:root /usr/bin/bwrap
+
+# set uid-bit
+chmod u+s /usr/bin/bwrap
+
 %changelog
 * Thu Nov 16 2023 Debarshi Ray <rishi@fedoraproject.org> - 0.8.0-1
 - Update to 0.8.0 (#2173820)
