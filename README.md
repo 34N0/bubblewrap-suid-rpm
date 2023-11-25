@@ -48,4 +48,8 @@ add the following lines:
 user.max_user_namespaces = 0
 kernel.unprivileged_userns_clone = 0
 ```
+load the parameters:
+```bash
+sudo sysctl --system
+```
 reboot the VM!
