@@ -1,4 +1,4 @@
-Name:    bubblewrap-suid
+Name:    bubblewrap
 Version: 0.8.0
 Release: 1%{?dist}
 Summary: Core execution tool for unprivileged containers (setuid variant)
