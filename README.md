@@ -37,3 +37,15 @@ Override the bubblewrap package:
 ```bash
 rpm-ostree override replace bubblewrap-<version>.fc39.x86_64.rpm
 ```
+
+### disabling unprivileged user namespaces
+Edit the sysctl config:
+```bash
+sudo nano /etc/sysctl.d/99-sysctl.conf 
+```
+add the following lines:
+```bash
+user.max_user_namespaces = 0
+kernel.unprivileged_userns_clone = 0
+```
+reboot the VM!
