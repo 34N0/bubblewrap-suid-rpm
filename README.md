@@ -6,7 +6,7 @@ This has to be done on a RPM based Linux distribution and is tested on a Fedora 
 
 Install required RPM build tools and dependencies:
 ```bash
-sudo rpm-ostree install -y rpmdevtools rpmlint docbook-style-xsl meson libcap-devel libselinux-devel
+rpm-ostree install -y rpmdevtools rpmlint docbook-style-xsl meson libcap-devel libselinux-devel
 ```
 Create the required file tree:
 ```bash
