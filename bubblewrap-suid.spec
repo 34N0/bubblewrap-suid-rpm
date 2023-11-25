@@ -39,18 +39,10 @@ user namespaces.
 %dir %{_datadir}/zsh
 %dir %{_datadir}/zsh/site-functions
 %{_datadir}/zsh/site-functions/_bwrap
-%if (0%{?rhel} != 0 && 0%{?rhel} <= 7)
-%attr(0755,root,root) %caps(cap_sys_admin,cap_net_admin,cap_sys_chroot,cap_setuid,cap_setgid=ep) %{_bindir}/bwrap
-%else
-%{_bindir}/bwrap
+# set uid-bit
+%attr(4755, root, root) %{_bindir}/bwrap
 %endif
 %{_mandir}/man1/bwrap.1*
-
-# better safe than sorry 
-chown root:root  %{_bindir}/bwrap
-
-# set uid-bit
-chmod u+s  %{_bindir}/bwrap
 
 %changelog
 * Thu Nov 16 2023 Debarshi Ray <rishi@fedoraproject.org> - 0.8.0-1
