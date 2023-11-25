@@ -39,11 +39,13 @@ user namespaces. (setuid variant)
 %dir %{_datadir}/zsh
 %dir %{_datadir}/zsh/site-functions
 %{_datadir}/zsh/site-functions/_bwrap
-
-# set uid-bit
-%attr(4755, root, root) %{_bindir}/bwrap
+%{_bindir}/bwrap
 
 %{_mandir}/man1/bwrap.1*
+
+%post
+chown root:root %{_bindir}/bwrap
+chmod u+s %{_bindir}/bwrap
 
 %changelog
 * Thu Nov 16 2023 Debarshi Ray <rishi@fedoraproject.org> - 0.8.0-1
