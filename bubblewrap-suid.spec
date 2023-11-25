@@ -1,7 +1,7 @@
 Name:    bubblewrap
 Version: 0.8.0
 Release: 1%{?dist}
-Summary: Core execution tool for unprivileged containers
+Summary: Core execution tool for unprivileged containers (setuid variant)
 
 License: LGPL-2.0-or-later
 URL:     https://github.com/containers/bubblewrap/
@@ -18,7 +18,7 @@ BuildRequires: /usr/bin/xsltproc
 %description
 Bubblewrap (/usr/bin/bwrap) is a core execution engine for unprivileged
 containers that works as a setuid binary on kernels without
-user namespaces.
+user namespaces. (setuid variant)
 
 %prep
 %autosetup
