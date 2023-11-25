@@ -1,5 +1,7 @@
 # Bubblewrap Suid
 
+This repository contains the .spec file for bundling a setuid variant of [Bubblewrap](https://github.com/containers/bubblewrap) as an RPM.
+
 ## Develop
 
 ### Build locally
