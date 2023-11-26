@@ -2,7 +2,7 @@
 
 This repository contains the .spec file for bundling a setuid variant of [Bubblewrap](https://github.com/containers/bubblewrap) as an RPM.
 
-This allows using flatpaks on immutable OSTree distributions with `unprivileged_user_namespaces` set to 0.
+This allows using flatpaks on immutable OSTree distributions with `user.max_user_namespaces = 0` and `kernel.unprivileged_userns_clone = 0` set.
 
 ## CI
 
