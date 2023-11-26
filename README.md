@@ -73,3 +73,8 @@ load the parameters:
 sudo sysctl --system
 ```
 reboot the VM!
+
+## Issues & Contributions
+
+Feel free to open issues or pull requests for improvements, bug fixes, or new features. 😄
+
