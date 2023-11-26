@@ -76,5 +76,6 @@ reboot the VM!
 
 ## Issues & Contributions
 
-Feel free to open issues or pull requests for improvements, bug fixes, or new features. 😄
+Feel free to open issues or pull requests for improvements, bug fixes. 😄
+Be mindful that this repository is simply the [Bubblewrap](https://github.com/containers/bubblewrap) project with the SUID bit set.
 
