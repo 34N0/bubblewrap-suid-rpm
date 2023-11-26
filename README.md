@@ -4,7 +4,9 @@ This repository contains the .spec file for bundling a setuid variant of [Bubble
 
 This allows using flatpaks on immutable OSTree distributions with `unprivileged_user_namespaces` set to 0.
 
-*Currently the Bubblewrap releases are tracked manually. The goal for this repository is for it to track automatically (CI)*
+## CI
+
+*Currently the Bubblewrap releases are tracked manually. The goal for this repository is for it to track automatically*
 
 ## Install
 
