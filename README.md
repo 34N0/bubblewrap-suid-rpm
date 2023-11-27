@@ -10,6 +10,10 @@ This allows using flatpaks on immutable OSTree distributions with `user.max_user
 
 ## Install
 
+The following commands are needed to replace an existing `bubblewrap` package with `bubblewrap-suid`.
+
+### OSTree
+
 Get the COPR `.repo` file
 ```bash
 curl -s https://copr.fedorainfracloud.org/coprs/34n0s/bubblewrap-suid/repo/fedora-39/34n0s-bubblewrap-suid-fedora-39.repo | sudo tee /etc/yum.repos.d/34n0s-bubblewrap-suid-fedora-39.repo
@@ -17,7 +21,18 @@ curl -s https://copr.fedorainfracloud.org/coprs/34n0s/bubblewrap-suid/repo/fedor
 ```
 Override `bubblewrap` (without suid) package
 ```bash
-sudo rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:34n0s:bubblewrap-suid' bubblewrap-suid
+sudo rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:34n0s:bubblewrap-suid' bubblewrap
+```
+
+### DNF
+
+Enable the COPR `.repo` file
+```bash
+sudo dnf copr enable 34n0s/bubblewrap-suid 
+```
+Override `bubblewrap` (without suid) package
+```bash
+sudo dnf swap bubblewrap bubblewrap-suid
 ```
 
 ## Develop
