@@ -1,4 +1,4 @@
-# 🚀 bubblewrap suid
+# 📦 bubblewrap-suid
 
 This repository contains the .spec file for bundling a setuid variant of [Bubblewrap](https://github.com/containers/bubblewrap) as an RPM.
 
@@ -17,7 +17,7 @@ $ curl -s https://copr.fedorainfracloud.org/coprs/34n0s/bubblewrap-suid/repo/fed
 ```
 Override `bubblewrap` (without suid) package
 ```bash
-sudo rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:34n0s:bubblewrap-suid' bubblewrap
+sudo rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:34n0s:bubblewrap-suid' bubblewrap-suid
 ```
 
 ## Develop
@@ -55,7 +55,7 @@ cd ~/rpmbuild/RPMS/x86_64
 ```
 Override the bubblewrap package:
 ```bash
-rpm-ostree override replace bubblewrap-<version>.fc39.x86_64.rpm
+rpm-ostree override replace bubblewrap-suid-<version>.fc39.x86_64.rpm
 ```
 
 ### disabling unprivileged user namespaces
