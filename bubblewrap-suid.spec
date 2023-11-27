@@ -23,7 +23,7 @@ containers that works as a setuid binary on kernels without
 user namespaces. (setuid variant)
 
 %prep
-%autosetup
+%setup -q -n bubblewrap-%{version}
 
 %build
 %meson -Dman=enabled -Dselinux=enabled
